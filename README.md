@@ -28,7 +28,7 @@ Note: Some design values are in float, you may round them off for implementation
 
 ## Repository
 
-- GitHub Repository: [holbertonschool-headphones](link-to-the-repository)
+- GitHub Repository: [holbertonschool-headphones](https://github.com/JD037/holbertonschool-headphones)
 
 ## Contributions
 
