@@ -52,49 +52,83 @@ body {
 
 /* Header Styles */
 .hero {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+}
+
+.hero-container {
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    flex: 1;
+    text-align: left;
 }
 
-nav ul {
+.nav {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    gap: 20px;
+    flex: 2;
+    justify-content: flex-end;
 }
 
-nav a {
-    color: #fff;
+.nav a {
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s;
+    padding: 10px 15px;
 }
 
-nav a:hover {
-    color: #ddd;
+.nav a:hover {
+    color: #dddddd;
+}
+
+.hero-content {
+    position: relative; /* Changed from absolute for better flexibility */
+    text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 70%;
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #f5a623;
-    color: #fff;
+    background-color: #FF5B5B;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -102,4 +136,18 @@ nav a:hover {
 
 .cta-button:hover {
     background-color: #e8910d;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        width: 90%;
+    }
+
+    .nav {
+        display: none; /* Or adjust to a mobile menu */
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
 }
