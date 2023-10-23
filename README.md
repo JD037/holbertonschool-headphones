@@ -6,16 +6,16 @@ Implement a design from scratch, replicating the provided design using pure HTML
 
 ## Design
 
-The design for this webpage has been sourced from Figma. For detailed design elements and specifics, [visit the Figma design here](link-to-figma-design).
+The design for this webpage has been sourced from Figma. For detailed design elements and specifics, [visit the Figma design here](https://www.figma.com/file/FfnVADRC9xgI3yiZliTBYZ/Holberton-School---Headphone-company?type=design&node-id=0-1&mode=design&t=T55PB1HJZtoDDVMj-0).
 
-If you're unable to access the provided link, you can also [download the Figma file directly here](link-to-figma-file-download).
+If you're unable to access the provided link, you can also [download the Figma file directly here](https://intranet.hbtn.io/rltoken/tWEPFyHyXyNO9Xfi2Er2EA).
 
 ### Fonts
 
 The following fonts have been used in the design:
 
-- [Source Sans Pro](link-to-source-sans-pro)
-- [Spin Cycle OT](link-to-spin-cycle-ot)
+- [Source Sans Pro](https://intranet.hbtn.io/rltoken/yvx4-XkjAQJgHlN6RAoKWQ)
+- [Spin Cycle OT](https://intranet.hbtn.io/rltoken/Jw0FKYKB6l5_2Koto0duTA)
 
 Note: Some design values are in float, you may round them off for implementation.
 
