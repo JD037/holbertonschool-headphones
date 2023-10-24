@@ -56,9 +56,12 @@ body {
     height: 100vh;
     color: #ffffff;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     position: relative;
     padding-left: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .hero::before {
@@ -68,17 +71,20 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: -1;
     background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
 }
 
 .hero-container {
     width: 80%;
     max-width: 1200px;
+    position: relative;
 }
 
 .logo-nav-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -87,6 +93,8 @@ body {
     font-weight: bold;
     flex: 1;
     text-align: left;
+    text-wrap: nowrap;
+    margin-right: 5px;
 }
 
 .nav {
@@ -101,6 +109,13 @@ body {
     text-decoration: none;
     transition: color 0.2s;
     padding: 10px 15px;
+    margin: 0 5px;
+}
+
+
+.nav ul {
+    display: flex;
+    gap: 20px; /* Add some spacing between the items */
 }
 
 .nav a:hover {
@@ -110,7 +125,12 @@ body {
 .hero-content {
     position: relative; /* Changed from absolute for better flexibility */
     text-align: center;
-    padding-left: 10%;
+    padding-left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    
+
 }
 
 .hero-content h1 {
@@ -148,8 +168,28 @@ body {
         display: none; /* Or adjust to a mobile menu */
     }
 
+    .nav a {
+        font-size: 14px; /* Reduced font size */
+        padding: 5px 10px; /* Reduced padding */
+    }
+
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 32px;
+        
+    }
+
+    .hero-content p {
+        font-size: 14px; /* Reduced font size for paragraph */
+        margin-bottom: 20px;
+        max-width: 80%;
+    }
+
+    .logo {
+        margin-right: 5px; /* Reduce the logo margin for smaller screens */
+    }
+    
+    .cta-button {
+        padding: 10px 20px; /* Slightly reduce button padding for smaller screens */
     }
 }
 
