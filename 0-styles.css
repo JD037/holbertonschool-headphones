@@ -56,9 +56,9 @@ body {
     height: 100vh;
     color: #ffffff;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
+    padding-left: 10%;
 }
 
 .hero::before {
@@ -74,13 +74,12 @@ body {
 .hero-container {
     width: 80%;
     max-width: 1200px;
-    position: relative;
 }
 
 .logo-nav-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    
 }
 
 .logo {
@@ -92,7 +91,7 @@ body {
 
 .nav {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex: 2;
     justify-content: flex-end;
 }
@@ -111,22 +110,24 @@ body {
 .hero-content {
     position: relative; /* Changed from absolute for better flexibility */
     text-align: center;
+    padding-left: 10%;
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 56px;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-content p {
     font-size: 16px;
     margin-bottom: 40px;
-    max-width: 70%;
+    max-width: 60%;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 25px;
     background-color: #FF5B5B;
     color: #ffffff;
     text-decoration: none;
@@ -151,3 +152,7 @@ body {
         font-size: 36px;
     }
 }
+
+    blockquote, q {
+        quotes: none;
+    }
