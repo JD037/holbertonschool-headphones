@@ -69,7 +69,8 @@ body {
 
 .logo-nav-container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -77,9 +78,8 @@ body {
 .logo {
     font-size: 18px;
     font-weight: bold;
-    flex: 1;
+    flex: 0;
     text-align: center;
-    margin-right: 10px;
     width: 100%;
     padding: auto;
 }
@@ -87,22 +87,25 @@ body {
 .logo img {
     width: 150px; /* Adjust to your desired width */
     height: auto; /* Maintains aspect ratio */
+    left: 25%;
+
 }
 
 
 .nav {
-    position: absolute;
+    z-index: 5;
     display: flex;
-    gap: 40px;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
+    position: relative;
 }
+
 
 .nav a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.2s;
-    padding: 10px 15px;
+    padding: 10px 10px;
     margin: 0 5px;
     justify-content: center;
     align-items: center;
@@ -131,7 +134,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     width: 100%;
     z-index: 10;
 }
@@ -156,6 +159,7 @@ body {
 
 .hero-content {
     position: absolute;
+    margin-top: 60px;
     top: 20%;  /* Adjust the top position for your content */
     left: 10%;  /* Left padding to move content away from the edge */
     text-align: center;
@@ -166,7 +170,7 @@ body {
 .hero-content h1 {
     font-size: 36px;  /* Increase font size for prominence */
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;  /* Setting text color to white for visibility */
 }
 
@@ -205,9 +209,19 @@ body {
     }
 
     .logo-nav-container {
+        position: relative;
         flex-direction: row; 
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;  /* Position right at the bottom of logo and hamburger */
+        left: 0;  /* Align to the left edge of .logo-nav-container */
+        z-index: 1000;  /* Make sure it appears above other content */
+        width: 100%;  /* Ensure it takes the full width of the container */
+        background-color: rgba(0, 0, 0, 0.7);  /* Adjust background color as needed */  /* Initially hidden until activated by the hamburger */
     }
 
     .nav .nav-list {
@@ -215,12 +229,19 @@ body {
     }
     .nav-list li {
         padding: 10px 0;
+        text-align: center;
     }
 
     .nav-list a {
         width: 100%;
         padding: 10px 20px; /* Adjust for better touch targets */
         text-align: center; /* Center the links */
+    }
+
+    .hero-content {
+        left: 50%; 
+        transform: translateX(-50%); 
+        width: 90%;
     }
 
     .hero-content h1 {
