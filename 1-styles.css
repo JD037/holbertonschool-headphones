@@ -217,6 +217,18 @@ section {
     text-align: center;
 }
 
+.section-container h2 {
+    font-size: 36px;  /* Increase font size for prominence */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.section-container p {
+    font-size: 18px;  /* Increase font size for prominence */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
 .features {
     display: flex;
     flex-wrap: wrap;
