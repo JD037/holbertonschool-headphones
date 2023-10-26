@@ -1,0 +1,435 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0px;
+}
+
+/* Header Styles */
+.hero {
+    background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
+    height: 80vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 10%;
+    background-position: center center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-container {
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.logo-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    flex: 0;
+    text-align: center;
+    width: 100%;
+    padding: auto;
+}
+
+.logo img {
+    width: 150px; /* Adjust to your desired width */
+    height: auto; /* Maintains aspect ratio */
+    left: 25%;
+
+}
+
+
+.nav {
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+}
+
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 10px 10px;
+    margin: 0 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a:hover {
+    color: #dddddd;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav .nav-list {
+    display: flex;
+}
+
+.menu-toggle:checked ~ .nav .nav-list {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    z-index: 10;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-menu span {
+    width: 20px;
+    height: 1px;
+    background-color: #ffffff;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    margin-top: 60px;
+    top: 20%;  /* Adjust the top position for your content */
+    left: 10%;  /* Left padding to move content away from the edge */
+    text-align: center;
+    width: 60%;  /* Adjust width as required */
+    transform: none;  /* Reset the transform */
+}
+
+.hero-content h1 {
+    font-size: 36px;  /* Increase font size for prominence */
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: white;  /* Setting text color to white for visibility */
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white;  /* Setting text color to white for visibility */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 15px 25px;
+    background-color: #FF5B5B;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content p {
+    font-size: 18px;  /* Increase font size slightly for better visibility */
+    color: white;  /* Setting text color to white for visibility */
+    margin-bottom: 0;
+    max-width: 100%;
+    line-height: 1.4;  /* Improve readability with line height */
+}
+
+.cta-button:hover {
+    background-color: #e8910d;
+}
+
+/* What we do */
+section {
+    background-color: #ffffff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section-container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.section-container h2 {
+    font-size: 36px;  /* Increase font size for prominence */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.section-container p {
+    font-size: 18px;  /* Increase font size for prominence */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-item {
+    flex-basis: calc(25% - 20px); /* -20px to account for the gap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-item img {
+    width: 100px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
+.feature-item:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Our Results Styles */
+.results {
+    background-image: url('/images/headphones_hero_2.jpg'); /* Adjust the path if needed */
+    background-size: cover;  /* This will cover the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    padding: 50px 0; /* Add some padding top and bottom for spacing, adjust as needed */
+    color: #ffffff; /* Set text color to white for visibility against the background */
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.results-content {
+    width: 80%;
+    max-width: 1200px;
+}
+
+.results-content h2 {
+    font-size: 36px;  /* Increase font size for prominence */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.results-content p {
+    font-size: 18px;  /* Increase font size slightly for better visibility */
+    margin-bottom: 20px;
+    max-width: 100%;
+    line-height: 1.4;  /* Improve readability with line height */
+}
+
+.results-grid {
+    display: flex;
+    
+    gap: 25px;  /* Adjust this for spacing between cards */
+    justify-content: center;
+    z-index: auto;
+}
+
+.result-card {
+    position: relative; 
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0px; /* Optional: For rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: For a subtle card shadow */
+    z-index: 0;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+}
+
+.result-card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card-bg {
+    background-image: url('/images/pentagone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Ensures the background stays behind the card content */
+}
+
+
+@media (max-width: 768px) {
+    .hero-container {
+        width: 100%;
+    }
+
+    .logo-nav-container {
+        position: relative;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;  /* Position right at the bottom of logo and hamburger */
+        left: 0;  /* Align to the left edge of .logo-nav-container */
+        z-index: 1000;  /* Make sure it appears above other content */
+        width: 100%;  /* Ensure it takes the full width of the container */
+        background-color: rgba(0, 0, 0, 0.7);  /* Adjust background color as needed */  /* Initially hidden until activated by the hamburger */
+    }
+
+    .nav .nav-list {
+        display: none;
+    }
+    .nav-list li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-list a {
+        width: 100%;
+        padding: 10px 20px; /* Adjust for better touch targets */
+        text-align: center; /* Center the links */
+    }
+
+    .hero-content {
+        left: 50%; 
+        transform: translateX(-50%); 
+        width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .logo {
+        order: 1;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 40%;
+        padding-top: 20px;
+    }
+
+    .logo img {
+        width: 150px; /* Adjust to your desired width */
+        height: auto; /* Maintains aspect ratio */
+        
+    }    
+    
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .hamburger-menu {
+        order: 0;
+        display: flex;
+        position: relative;
+        left: 0;
+        top: 20px;
+        transform: none;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .nav .nav-list {
+        display: flex;
+    }
+
+    .hamburger-menu, .menu-toggle {
+        display: none;
+    }
+}
